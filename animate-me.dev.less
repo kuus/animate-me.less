@@ -1,0 +1,523 @@
+/*
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2013 Alessandro Sansottera (@kuus), http://kunderikuus.net/
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of
+ * this software and associated documentation files (the "Software"), to deal in
+ * the Software without restriction, including without limitation the rights to
+ * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+ * the Software, and to permit persons to whom the Software is furnished to do so,
+ * subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+/*
+*******************************************************************
+**                                                               **
+**                      LESS ANIMATIONS                          **
+**                                                               **
+*******************************************************************
+*/
+
+// LESS JS VERSION
+// --------------------------------------------------
+.animate-me(@name; @params: false; @selector: false;
+	@1percentage: false; @1rules: 'dummy';
+	@2percentage: false; @2rules: 'dummy';
+	@3percentage: false; @3rules: 'dummy';
+	@4percentage: false; @4rules: 'dummy';
+	@5percentage: false; @5rules: 'dummy';
+	@6percentage: false; @6rules: 'dummy';
+	@7percentage: false; @7rules: 'dummy';
+	@8percentage: false; @8rules: 'dummy';
+	@9percentage: false; @9rules: 'dummy';
+	@10percentage: false; @10rules: 'dummy';
+	@11percentage: false; @11rules: 'dummy'
+) when (@lesscompiler='js') {
+
+	.keyframe(@pre; @loopindex; @vendor) when (@lesscompiler='js') {
+		@space: ~" ";
+	  @newline: "`'\n'`";
+	  @animationSelector: ~"} @{selector}";
+    @keyframe: ~"@{pre}@{newline}@@{vendor}keyframes @{name} {@{newline}";
+
+    .keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage) when not (iskeyword(@1percentage)) and (iskeyword(@2percentage)) and (iskeyword(@3percentage)) and (iskeyword(@4percentage)) and (iskeyword(@5percentage)) and (iskeyword(@6percentage)) and (iskeyword(@7percentage)) and (iskeyword(@8percentage)) and (iskeyword(@9percentage)) and (iskeyword(@10percentage)) and (iskeyword(@11percentage)) {
+	    @{keyframe} {
+				.keyframe-declaration('last'; @1rules; @1percentage);
+      }
+		}
+		.keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage) when not (iskeyword(@1percentage)) and not (iskeyword(@2percentage)) and (iskeyword(@3percentage)) and (iskeyword(@4percentage)) and (iskeyword(@5percentage)) and (iskeyword(@6percentage)) and (iskeyword(@7percentage)) and (iskeyword(@8percentage)) and (iskeyword(@9percentage)) and (iskeyword(@10percentage)) and (iskeyword(@11percentage)) {
+			@{keyframe} {
+				.keyframe-declaration(''; @1rules; @1percentage);
+      } @{space} {
+				.keyframe-declaration('last'; @2rules; @2percentage);
+      }
+		}
+		.keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage) when not (iskeyword(@1percentage)) and not (iskeyword(@2percentage)) and not (iskeyword(@3percentage)) and (iskeyword(@4percentage)) and (iskeyword(@5percentage)) and (iskeyword(@6percentage)) and (iskeyword(@7percentage)) and (iskeyword(@8percentage)) and (iskeyword(@9percentage)) and (iskeyword(@10percentage)) and (iskeyword(@11percentage)) {
+			@{keyframe} {
+				.keyframe-declaration(''; @1rules; @1percentage);
+      } @{space} {
+				.keyframe-declaration(''; @2rules; @2percentage);
+      } @{space} {
+        .keyframe-declaration('last'; @3rules; @3percentage);
+      }
+		}
+		.keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage) when not (iskeyword(@1percentage)) and not (iskeyword(@2percentage)) and not (iskeyword(@3percentage))  and not (iskeyword(@4percentage)) and (iskeyword(@5percentage)) and (iskeyword(@6percentage)) and (iskeyword(@7percentage)) and (iskeyword(@8percentage)) and (iskeyword(@9percentage)) and (iskeyword(@10percentage)) and (iskeyword(@11percentage)) {
+			@{keyframe} {
+				.keyframe-declaration(''; @1rules; @1percentage);
+      } @{space} {
+				.keyframe-declaration(''; @2rules; @2percentage);
+      } @{space} {
+        .keyframe-declaration(''; @3rules; @3percentage);
+      } @{space} {
+        .keyframe-declaration('last'; @4rules; @4percentage);
+      }
+		}
+		.keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage) when not (iskeyword(@1percentage)) and not (iskeyword(@2percentage)) and not (iskeyword(@3percentage))  and not (iskeyword(@4percentage)) and not (iskeyword(@5percentage)) and (iskeyword(@6percentage)) and (iskeyword(@7percentage)) and (iskeyword(@8percentage)) and (iskeyword(@9percentage)) and (iskeyword(@10percentage)) and (iskeyword(@11percentage)) {
+			@{keyframe} {
+				.keyframe-declaration(''; @1rules; @1percentage);
+      } @{space} {
+				.keyframe-declaration(''; @2rules; @2percentage);
+      } @{space} {
+        .keyframe-declaration(''; @3rules; @3percentage);
+      } @{space} {
+        .keyframe-declaration(''; @4rules; @4percentage);
+      } @{space} {
+        .keyframe-declaration('last'; @5rules; @5percentage);
+      }
+		}
+		.keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage) when not (iskeyword(@1percentage)) and not (iskeyword(@2percentage)) and not (iskeyword(@3percentage))  and not (iskeyword(@4percentage)) and not (iskeyword(@5percentage)) and not (iskeyword(@6percentage)) and (iskeyword(@7percentage)) and (iskeyword(@8percentage)) and (iskeyword(@9percentage)) and (iskeyword(@10percentage)) and (iskeyword(@11percentage)) {
+			@{keyframe} {
+				.keyframe-declaration(''; @1rules; @1percentage);
+      } @{space} {
+				.keyframe-declaration(''; @2rules; @2percentage);
+      } @{space} {
+        .keyframe-declaration(''; @3rules; @3percentage);
+      } @{space} {
+        .keyframe-declaration(''; @4rules; @4percentage);
+      } @{space} {
+        .keyframe-declaration(''; @5rules; @5percentage);
+      } @{space} {
+        .keyframe-declaration('last'; @6rules; @6percentage);
+      }
+		}
+		.keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage) when not (iskeyword(@1percentage)) and not (iskeyword(@2percentage)) and not (iskeyword(@3percentage))  and not (iskeyword(@4percentage)) and not (iskeyword(@5percentage)) and not (iskeyword(@6percentage)) and not (iskeyword(@7percentage)) and (iskeyword(@8percentage)) and (iskeyword(@9percentage)) and (iskeyword(@10percentage)) and (iskeyword(@11percentage)) {
+			@{keyframe} {
+				.keyframe-declaration(''; @1rules; @1percentage);
+      } @{space} {
+				.keyframe-declaration(''; @2rules; @2percentage);
+      } @{space} {
+        .keyframe-declaration(''; @3rules; @3percentage);
+      } @{space} {
+        .keyframe-declaration(''; @4rules; @4percentage);
+      } @{space} {
+        .keyframe-declaration(''; @5rules; @5percentage);
+      } @{space} {
+        .keyframe-declaration(''; @6rules; @6percentage);
+      } @{space} {
+        .keyframe-declaration('last'; @7rules; @7percentage);
+      }
+		}
+		.keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage) when not (iskeyword(@1percentage)) and not (iskeyword(@2percentage)) and not (iskeyword(@3percentage))  and not (iskeyword(@4percentage)) and not (iskeyword(@5percentage)) and not (iskeyword(@6percentage)) and not (iskeyword(@7percentage)) and not (iskeyword(@8percentage)) and (iskeyword(@9percentage)) and (iskeyword(@10percentage)) and (iskeyword(@11percentage)) {
+			@{keyframe} {
+				.keyframe-declaration(''; @1rules; @1percentage);
+      } @{space} {
+				.keyframe-declaration(''; @2rules; @2percentage);
+      } @{space} {
+        .keyframe-declaration(''; @3rules; @3percentage);
+      } @{space} {
+        .keyframe-declaration(''; @4rules; @4percentage);
+      } @{space} {
+        .keyframe-declaration(''; @5rules; @5percentage);
+      } @{space} {
+        .keyframe-declaration(''; @6rules; @6percentage);
+      } @{space} {
+        .keyframe-declaration(''; @7rules; @7percentage);
+      } @{space} {
+        .keyframe-declaration('last'; @8rules; @8percentage);
+      }
+		}
+		.keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage) when not (iskeyword(@1percentage)) and not (iskeyword(@2percentage)) and not (iskeyword(@3percentage))  and not (iskeyword(@4percentage)) and not (iskeyword(@5percentage)) and not (iskeyword(@6percentage)) and not (iskeyword(@7percentage)) and not (iskeyword(@8percentage)) and not (iskeyword(@9percentage)) and (iskeyword(@10percentage)) and (iskeyword(@11percentage)) {
+			@{keyframe} {
+				.keyframe-declaration(''; @1rules; @1percentage);
+      } @{space} {
+				.keyframe-declaration(''; @2rules; @2percentage);
+      } @{space} {
+        .keyframe-declaration(''; @3rules; @3percentage);
+      } @{space} {
+        .keyframe-declaration(''; @4rules; @4percentage);
+      } @{space} {
+        .keyframe-declaration(''; @5rules; @5percentage);
+      } @{space} {
+        .keyframe-declaration(''; @6rules; @6percentage);
+      } @{space} {
+        .keyframe-declaration(''; @7rules; @7percentage);
+      } @{space} {
+        .keyframe-declaration(''; @8rules; @8percentage);
+      } @{space} {
+        .keyframe-declaration('last'; @9rules; @9percentage);
+      }
+		}
+		.keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage) when not (iskeyword(@1percentage)) and not (iskeyword(@2percentage)) and not (iskeyword(@3percentage))  and not (iskeyword(@4percentage)) and not (iskeyword(@5percentage)) and not (iskeyword(@6percentage)) and not (iskeyword(@7percentage)) and not (iskeyword(@8percentage)) and not (iskeyword(@9percentage)) and not (iskeyword(@10percentage)) and (iskeyword(@11percentage)) {
+			@{keyframe} {
+				.keyframe-declaration(''; @1rules; @1percentage);
+      } @{space} {
+				.keyframe-declaration(''; @2rules; @2percentage);
+      } @{space} {
+        .keyframe-declaration(''; @3rules; @3percentage);
+      } @{space} {
+        .keyframe-declaration(''; @4rules; @4percentage);
+      } @{space} {
+        .keyframe-declaration(''; @5rules; @5percentage);
+      } @{space} {
+        .keyframe-declaration(''; @6rules; @6percentage);
+      } @{space} {
+        .keyframe-declaration(''; @7rules; @7percentage);
+      } @{space} {
+        .keyframe-declaration(''; @8rules; @8percentage);
+      } @{space} {
+        .keyframe-declaration(''; @9rules; @9percentage);
+      } @{space} {
+        .keyframe-declaration('last'; @10rules; @10percentage);
+      }
+		}
+		.keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage) when not (iskeyword(@1percentage)) and not (iskeyword(@2percentage)) and not (iskeyword(@3percentage))  and not (iskeyword(@4percentage)) and not (iskeyword(@5percentage)) and not (iskeyword(@6percentage)) and not (iskeyword(@7percentage)) and not (iskeyword(@8percentage)) and not (iskeyword(@9percentage)) and not (iskeyword(@10percentage)) and not (iskeyword(@11percentage)) {
+			@{keyframe} {
+				.keyframe-declaration(''; @1rules; @1percentage);
+      } @{space} {
+				.keyframe-declaration(''; @2rules; @2percentage);
+      } @{space} {
+        .keyframe-declaration(''; @3rules; @3percentage);
+      } @{space} {
+        .keyframe-declaration(''; @4rules; @4percentage);
+      } @{space} {
+        .keyframe-declaration(''; @5rules; @5percentage);
+      } @{space} {
+        .keyframe-declaration(''; @6rules; @6percentage);
+      } @{space} {
+        .keyframe-declaration(''; @7rules; @7percentage);
+      } @{space} {
+        .keyframe-declaration(''; @8rules; @8percentage);
+      } @{space} {
+        .keyframe-declaration(''; @9rules; @9percentage);
+      } @{space} {
+        .keyframe-declaration(''; @10rules; @10percentage);
+      } @{space} {
+        .keyframe-declaration('last'; @11rules; @11percentage);
+      }
+		}
+
+    .keyframe-declaration(@loopindexDeclaration; @rules; @percent) when not (iskeyword(@selector)) {
+      @prefixed: %(@rules, @vendor);
+      @rulesInject: ~"@{prefixed};";
+      @inject: ~"@{percent} {@{newline}    @{rulesInject} /*";
+      @{inject} { /**/ }
+    }
+    .keyframe-declaration(@loopindexDeclaration; @rules; @percent) when not (@loopindex='last') and not (@loopindexDeclaration='last') and (iskeyword(@selector)) {
+      @prefixed: %(@rules, @vendor);
+      @rulesInject: ~"@{prefixed};";
+      @inject: ~"@{percent} {@{newline}    @{rulesInject} /*";
+      @{inject} { /**/ }
+    }
+    .keyframe-declaration(@loopindexDeclaration; @rules; @percent) when not (@loopindex='last') and (@loopindexDeclaration='last') and (iskeyword(@selector)) {
+      @prefixed: %(@rules, @vendor);
+      @rulesInject: ~"@{prefixed};";
+      @inject: ~"@{percent} {@{newline}    @{rulesInject} /*";
+      @{inject} { /**/ }
+    }
+    .keyframe-declaration(@loopindexDeclaration; @rules; @percent) when (@loopindex='last') and not (@loopindexDeclaration='last') and (iskeyword(@selector)) {
+      @prefixed: %(@rules, @vendor);
+      @rulesInject: ~"@{prefixed};";
+      @inject: ~"@{percent} {@{newline}    @{rulesInject} /*";
+      @{inject} { /**/ }
+    }
+    .keyframe-declaration(@loopindexDeclaration; @rules; @percent) when (@loopindex='last') and (@loopindexDeclaration='last') and (iskeyword(@selector)) {
+      @prefixed: %(@rules, @vendor);
+      @rulesInject: ~"@{prefixed};";
+      @inject: ~"@{percent} {@{newline}    @{rulesInject}@{newline} } /*";
+      @{inject} { /**/ }
+    }
+
+    .keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage);
+
+    .animation-selector() {}
+    .animation-selector() when (@loopindex='last') and not (iskeyword(@selector)) and (iskeyword(@params)) {
+      @{animationSelector} {
+        -moz-animation: @name;
+        -webkit-animation: @name;
+        -o-animation: @name;
+        animation: @name;
+      }
+    }
+    .animation-selector() when (@loopindex='last') and not (iskeyword(@selector)) and not (iskeyword(@params)) {
+      @{animationSelector} {
+        -moz-animation: @name @params;
+        -webkit-animation: @name @params;
+        -o-animation: @name @params;
+        animation: @name @params;
+      }
+    }
+    .animation-selector;
+  }
+
+  .keyframe(''      , 'first', '-moz-');
+  .keyframe(~'} ', 0,       '-webkit-');
+  .keyframe(~'} ', 0,            '-o-');
+  .keyframe(~'} ', 'last',          '');
+}
+
+
+// LESS PHP VERSION
+// --------------------------------------------------
+.animate-me(@name; @params: false; @selector: false;
+	@1percentage: false; @1rules: 'dummy';
+	@2percentage: false; @2rules: 'dummy';
+	@3percentage: false; @3rules: 'dummy';
+	@4percentage: false; @4rules: 'dummy';
+	@5percentage: false; @5rules: 'dummy';
+	@6percentage: false; @6rules: 'dummy';
+	@7percentage: false; @7rules: 'dummy';
+	@8percentage: false; @8rules: 'dummy';
+	@9percentage: false; @9rules: 'dummy';
+	@10percentage: false; @10rules: 'dummy';
+	@11percentage: false; @11rules: 'dummy'
+) when (@lesscompiler='php') {
+
+  .keyframe(@pre; @loopindex; @vendor) {
+		@space: ~" ";
+		@commentOpen: ~"/*";
+		@commentClose: ~"*/";
+		@animationSelector: ~"*/} } @{selector}";
+		@hackClass: ~"*/ } } .hack";
+    @keyframe: ~"@{pre}@@{vendor}keyframes @{name} { ";
+
+		.keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage) when not (iskeyword(@1percentage)) and (iskeyword(@2percentage)) and (iskeyword(@3percentage)) and (iskeyword(@4percentage)) and (iskeyword(@5percentage)) and (iskeyword(@6percentage)) and (iskeyword(@7percentage)) and (iskeyword(@8percentage)) and (iskeyword(@9percentage)) and (iskeyword(@10percentage)) and (iskeyword(@11percentage)) {
+	    @{keyframe} {
+				.keyframe-declaration('first'; @1rules; @1percentage);
+      }
+		}
+		.keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage) when not (iskeyword(@1percentage)) and not (iskeyword(@2percentage)) and (iskeyword(@3percentage)) and (iskeyword(@4percentage)) and (iskeyword(@5percentage)) and (iskeyword(@6percentage)) and (iskeyword(@7percentage)) and (iskeyword(@8percentage)) and (iskeyword(@9percentage)) and (iskeyword(@10percentage)) and (iskeyword(@11percentage)) {
+			@{keyframe} {
+				.keyframe-declaration('first'; @1rules; @1percentage);
+      } @{space} {
+				.keyframe-declaration('last'; @2rules; @2percentage);
+      }
+		}
+		.keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage) when not (iskeyword(@1percentage)) and not (iskeyword(@2percentage)) and not (iskeyword(@3percentage)) and (iskeyword(@4percentage)) and (iskeyword(@5percentage)) and (iskeyword(@6percentage)) and (iskeyword(@7percentage)) and (iskeyword(@8percentage)) and (iskeyword(@9percentage)) and (iskeyword(@10percentage)) and (iskeyword(@11percentage)) {
+			@{keyframe} {
+				.keyframe-declaration('first'; @1rules; @1percentage);
+      } @{space} {
+				.keyframe-declaration(''; @2rules; @2percentage);
+      } @{space} {
+        .keyframe-declaration('last'; @3rules; @3percentage);
+      }
+		}
+		.keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage) when not (iskeyword(@1percentage)) and not (iskeyword(@2percentage)) and not (iskeyword(@3percentage))  and not (iskeyword(@4percentage)) and (iskeyword(@5percentage)) and (iskeyword(@6percentage)) and (iskeyword(@7percentage)) and (iskeyword(@8percentage)) and (iskeyword(@9percentage)) and (iskeyword(@10percentage)) and (iskeyword(@11percentage)) {
+			@{keyframe} {
+				.keyframe-declaration('first'; @1rules; @1percentage);
+      } @{space} {
+				.keyframe-declaration(''; @2rules; @2percentage);
+      } @{space} {
+        .keyframe-declaration(''; @3rules; @3percentage);
+      } @{space} {
+        .keyframe-declaration('last'; @4rules; @4percentage);
+      }
+		}
+		.keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage) when not (iskeyword(@1percentage)) and not (iskeyword(@2percentage)) and not (iskeyword(@3percentage))  and not (iskeyword(@4percentage)) and not (iskeyword(@5percentage)) and (iskeyword(@6percentage)) and (iskeyword(@7percentage)) and (iskeyword(@8percentage)) and (iskeyword(@9percentage)) and (iskeyword(@10percentage)) and (iskeyword(@11percentage)) {
+			@{keyframe} {
+				.keyframe-declaration('first'; @1rules; @1percentage);
+      } @{space} {
+				.keyframe-declaration(''; @2rules; @2percentage);
+      } @{space} {
+        .keyframe-declaration(''; @3rules; @3percentage);
+      } @{space} {
+        .keyframe-declaration(''; @4rules; @4percentage);
+      } @{space} {
+        .keyframe-declaration('last'; @5rules; @5percentage);
+      }
+		}
+		.keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage) when not (iskeyword(@1percentage)) and not (iskeyword(@2percentage)) and not (iskeyword(@3percentage))  and not (iskeyword(@4percentage)) and not (iskeyword(@5percentage)) and not (iskeyword(@6percentage)) and (iskeyword(@7percentage)) and (iskeyword(@8percentage)) and (iskeyword(@9percentage)) and (iskeyword(@10percentage)) and (iskeyword(@11percentage)) {
+			@{keyframe} {
+				.keyframe-declaration('first'; @1rules; @1percentage);
+      } @{space} {
+				.keyframe-declaration(''; @2rules; @2percentage);
+      } @{space} {
+        .keyframe-declaration(''; @3rules; @3percentage);
+      } @{space} {
+        .keyframe-declaration(''; @4rules; @4percentage);
+      } @{space} {
+        .keyframe-declaration(''; @5rules; @5percentage);
+      } @{space} {
+        .keyframe-declaration('last'; @6rules; @6percentage);
+      }
+		}
+		.keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage) when not (iskeyword(@1percentage)) and not (iskeyword(@2percentage)) and not (iskeyword(@3percentage))  and not (iskeyword(@4percentage)) and not (iskeyword(@5percentage)) and not (iskeyword(@6percentage)) and not (iskeyword(@7percentage)) and (iskeyword(@8percentage)) and (iskeyword(@9percentage)) and (iskeyword(@10percentage)) and (iskeyword(@11percentage)) {
+			@{keyframe} {
+				.keyframe-declaration('first'; @1rules; @1percentage);
+      } @{space} {
+				.keyframe-declaration(''; @2rules; @2percentage);
+      } @{space} {
+        .keyframe-declaration(''; @3rules; @3percentage);
+      } @{space} {
+        .keyframe-declaration(''; @4rules; @4percentage);
+      } @{space} {
+        .keyframe-declaration(''; @5rules; @5percentage);
+      } @{space} {
+        .keyframe-declaration(''; @6rules; @6percentage);
+      } @{space} {
+        .keyframe-declaration('last'; @7rules; @7percentage);
+      }
+		}
+		.keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage) when not (iskeyword(@1percentage)) and not (iskeyword(@2percentage)) and not (iskeyword(@3percentage))  and not (iskeyword(@4percentage)) and not (iskeyword(@5percentage)) and not (iskeyword(@6percentage)) and not (iskeyword(@7percentage)) and not (iskeyword(@8percentage)) and (iskeyword(@9percentage)) and (iskeyword(@10percentage)) and (iskeyword(@11percentage)) {
+			@{keyframe} {
+				.keyframe-declaration('first'; @1rules; @1percentage);
+      } @{space} {
+				.keyframe-declaration(''; @2rules; @2percentage);
+      } @{space} {
+        .keyframe-declaration(''; @3rules; @3percentage);
+      } @{space} {
+        .keyframe-declaration(''; @4rules; @4percentage);
+      } @{space} {
+        .keyframe-declaration(''; @5rules; @5percentage);
+      } @{space} {
+        .keyframe-declaration(''; @6rules; @6percentage);
+      } @{space} {
+        .keyframe-declaration(''; @7rules; @7percentage);
+      } @{space} {
+        .keyframe-declaration('last'; @8rules; @8percentage);
+      }
+		}
+		.keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage) when not (iskeyword(@1percentage)) and not (iskeyword(@2percentage)) and not (iskeyword(@3percentage))  and not (iskeyword(@4percentage)) and not (iskeyword(@5percentage)) and not (iskeyword(@6percentage)) and not (iskeyword(@7percentage)) and not (iskeyword(@8percentage)) and not (iskeyword(@9percentage)) and (iskeyword(@10percentage)) and (iskeyword(@11percentage)) {
+			@{keyframe} {
+				.keyframe-declaration('first'; @1rules; @1percentage);
+      } @{space} {
+				.keyframe-declaration(''; @2rules; @2percentage);
+      } @{space} {
+        .keyframe-declaration(''; @3rules; @3percentage);
+      } @{space} {
+        .keyframe-declaration(''; @4rules; @4percentage);
+      } @{space} {
+        .keyframe-declaration(''; @5rules; @5percentage);
+      } @{space} {
+        .keyframe-declaration(''; @6rules; @6percentage);
+      } @{space} {
+        .keyframe-declaration(''; @7rules; @7percentage);
+      } @{space} {
+        .keyframe-declaration(''; @8rules; @8percentage);
+      } @{space} {
+        .keyframe-declaration('last'; @9rules; @9percentage);
+      }
+		}
+		.keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage) when not (iskeyword(@1percentage)) and not (iskeyword(@2percentage)) and not (iskeyword(@3percentage))  and not (iskeyword(@4percentage)) and not (iskeyword(@5percentage)) and not (iskeyword(@6percentage)) and not (iskeyword(@7percentage)) and not (iskeyword(@8percentage)) and not (iskeyword(@9percentage)) and not (iskeyword(@10percentage)) and (iskeyword(@11percentage)) {
+			@{keyframe} {
+				.keyframe-declaration('first'; @1rules; @1percentage);
+      } @{space} {
+				.keyframe-declaration(''; @2rules; @2percentage);
+      } @{space} {
+        .keyframe-declaration(''; @3rules; @3percentage);
+      } @{space} {
+        .keyframe-declaration(''; @4rules; @4percentage);
+      } @{space} {
+        .keyframe-declaration(''; @5rules; @5percentage);
+      } @{space} {
+        .keyframe-declaration(''; @6rules; @6percentage);
+      } @{space} {
+        .keyframe-declaration(''; @7rules; @7percentage);
+      } @{space} {
+        .keyframe-declaration(''; @8rules; @8percentage);
+      } @{space} {
+        .keyframe-declaration(''; @9rules; @9percentage);
+      } @{space} {
+        .keyframe-declaration('last'; @10rules; @10percentage);
+      }
+		}
+		.keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage) when not (iskeyword(@1percentage)) and not (iskeyword(@2percentage)) and not (iskeyword(@3percentage))  and not (iskeyword(@4percentage)) and not (iskeyword(@5percentage)) and not (iskeyword(@6percentage)) and not (iskeyword(@7percentage)) and not (iskeyword(@8percentage)) and not (iskeyword(@9percentage)) and not (iskeyword(@10percentage)) and not (iskeyword(@11percentage)) {
+			@{keyframe} {
+				.keyframe-declaration('first'; @1rules; @1percentage);
+      } @{space} {
+				.keyframe-declaration(''; @2rules; @2percentage);
+      } @{space} {
+        .keyframe-declaration(''; @3rules; @3percentage);
+      } @{space} {
+        .keyframe-declaration(''; @4rules; @4percentage);
+      } @{space} {
+        .keyframe-declaration(''; @5rules; @5percentage);
+      } @{space} {
+        .keyframe-declaration(''; @6rules; @6percentage);
+      } @{space} {
+        .keyframe-declaration(''; @7rules; @7percentage);
+      } @{space} {
+        .keyframe-declaration(''; @8rules; @8percentage);
+      } @{space} {
+        .keyframe-declaration(''; @9rules; @9percentage);
+      } @{space} {
+        .keyframe-declaration(''; @10rules; @10percentage);
+      } @{space} {
+        .keyframe-declaration('last'; @11rules; @11percentage);
+      }
+		}
+
+    .keyframe-declaration(@loopindexDeclaration; @rules; @percent) when (@loopindexDeclaration='first') and not (iskeyword(@selector)) {
+      @prefixed: %(@rules, @vendor);
+      @rulesInject: ~"@{prefixed};";
+      @inject: ~"@{percent} { @{rulesInject} @{commentOpen}";
+      @{inject} { commented: 0; }
+    }
+    .keyframe-declaration(@loopindexDeclaration; @rules; @percent) when not (@loopindexDeclaration='first') and not (iskeyword(@selector)) {
+      @prefixed: %(@rules, @vendor);
+      @rulesInject: ~"@{prefixed};";
+      @inject: ~"@{commentClose} } @{percent} { @{rulesInject} @{commentOpen}";
+      @{inject} { commented: 0; }
+     }
+    .keyframe-declaration(@loopindexDeclaration; @rules; @percent) when (@loopindexDeclaration='first') and (iskeyword(@selector)) {
+      @prefixed: %(@rules, @vendor);
+      @rulesInject: ~"@{prefixed};";
+      @inject: ~"@{percent} { @{rulesInject} @{commentOpen}";
+      @{inject} { commented: 0; }
+    }
+    .keyframe-declaration(@loopindexDeclaration; @rules; @percent) when not (@loopindexDeclaration='first') and (iskeyword(@selector)) {
+      @prefixed: %(@rules, @vendor);
+      @rulesInject: ~"@{prefixed};";
+      @inject: ~"@{commentClose} } @{percent} { @{rulesInject} @{commentOpen}";
+      @{inject} { commented: 0; }
+    }
+    .keyframe-selector(@1percentage; @2percentage; @3percentage; @4percentage; @5percentage; @6percentage; @7percentage; @8percentage; @9percentage; @10percentage; @11percentage);
+
+    .animation-selector() {}
+    .animation-selector() when (@loopindex='last') and not (iskeyword(@selector)) and (iskeyword(@params)) {
+      @{animationSelector} {
+        -moz-animation: @name;
+        -webkit-animation: @name;
+        -o-animation: @name;
+        animation: @name;
+      }
+    }
+    .animation-selector() when (@loopindex='last') and not (iskeyword(@selector)) and not (iskeyword(@params)) {
+      @{animationSelector} {
+        -moz-animation: @name @params;
+        -webkit-animation: @name @params;
+        -o-animation: @name @params;
+        animation: @name @params;
+      }
+    }
+    .animation-selector() when (@loopindex='last') and (iskeyword(@selector)) {
+      @{hackClass} { visibility: visible }
+    }
+    .animation-selector;
+  }
+
+  .keyframe(''      , 'first', '-moz-');
+  .keyframe(~'*/} }', 0,    '-webkit-');
+  .keyframe(~'*/} }', 0,         '-o-');
+  .keyframe(~'*/} }', 'last',       '');
+}

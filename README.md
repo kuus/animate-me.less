@@ -97,19 +97,19 @@ this piece of .less code...
     opacity: .4; /* {
   /**/
 }
-} 
+}
 @-webkit-keyframes CrossFade {
  0%, 100% {
     opacity: .4; /* {
   /**/
 }
-} 
+}
 @-o-keyframes CrossFade {
  0%, 100% {
     opacity: .4; /* {
   /**/
 }
-} 
+}
 @keyframes CrossFade {
  0%, 100% {
     opacity: .4; /* {
@@ -148,6 +148,10 @@ this piece of .less code...
 }
 ```
 
+Try it yourself here:
+* the **[jsCompiler](http://less2css.org/)**
+* the **[phpCompiler](http://leafo.net/lessphp/)**
+
 Usage and parameters
 -------------------------
 These are the parameters you pass to the mixin:
@@ -165,7 +169,7 @@ These are the parameters you pass to the mixin:
   </tr>
   <tr>
     <td></td>
-    <td><code>0.5s</code> see <a href="http://www.css3files.com/animation/">here</a> for all the animation properties</td>
+    <td><code>0.5s</code> <i>see <a href="http://www.css3files.com/animation/">here</a> for all the animation properties</i></td>
     <td><code>'.css-animation-selector'</code> <i>must be quoted</i></td>
     <td><code>'15%, 75%'</code> <i>put quotes when you have more than one percentage</i></td>
     <td><i>can be one or as many properties...</i></td>
@@ -180,7 +184,7 @@ These are the parameters you pass to the mixin:
 </table>
 
 
-Thanks to these threads on stackoverflow: 
+Thanks to these threads on stackoverflow:
 * http://stackoverflow.com/questions/9166152/sign-and-variables-in-css-keyframes-using-less-css
 * http://stackoverflow.com/questions/14868042/using-variables-in-property-names-in-less-dynamic-properties-property-name-in/15443008#15443008
 

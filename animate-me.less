@@ -1,0 +1,145 @@
+/*
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2013 Alessandro Sansottera (@kuus), http://kunderikuus.net/
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of
+ * this software and associated documentation files (the "Software"), to deal in
+ * the Software without restriction, including without limitation the rights to
+ * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+ * the Software, and to permit persons to whom the Software is furnished to do so,
+ * subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+/*
+*******************************************************************
+**                                                               **
+**                      LESS ANIMATIONS                          **
+**                                                               **
+*******************************************************************
+*/
+
+// LESS JS VERSION
+// --------------------------------------------------
+.animate-me(@n; @p: false; @s: false; @1p: false; @1r: 'x'; @2p: false; @2r: 'x'; @3p: false; @3r: 'x'; @4p: false; @4r: 'x'; @5p: false; @5r: 'x'; @6p: false; @6r: 'x'; @7p: false; @7r: 'x'; @8p: false; @8r: 'x'; @9p: false; @9r: 'x'; @10p: false; @10r: 'x'; @11p: false; @11r: 'x')
+	when (@lesscompiler='js') {
+	.keyframe(@x; @1i; @v) {
+		@sp: ~" ";
+	  @z: "`'\n'`";
+	  @as: ~"} @{s}";
+    @keyframe: ~"@{x}@{z}@@{v}keyframes @{n} {@{z}";
+
+    .ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p) when not (iskeyword(@1p)) and (iskeyword(@2p)) and (iskeyword(@3p)) and (iskeyword(@4p)) and (iskeyword(@5p)) and (iskeyword(@6p)) and (iskeyword(@7p)) and (iskeyword(@8p)) and (iskeyword(@9p)) and (iskeyword(@10p)) and (iskeyword(@11p)) { @{keyframe} { .kd('l'; @1r; @1p); } }
+		.ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p) when not (iskeyword(@1p)) and not (iskeyword(@2p)) and (iskeyword(@3p)) and (iskeyword(@4p)) and (iskeyword(@5p)) and (iskeyword(@6p)) and (iskeyword(@7p)) and (iskeyword(@8p)) and (iskeyword(@9p)) and (iskeyword(@10p)) and (iskeyword(@11p)) { @{keyframe} { .kd(''; @1r; @1p); } @{sp} { .kd('l'; @2r; @2p); } }
+		.ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p) when not (iskeyword(@1p)) and not (iskeyword(@2p)) and not (iskeyword(@3p)) and (iskeyword(@4p)) and (iskeyword(@5p)) and (iskeyword(@6p)) and (iskeyword(@7p)) and (iskeyword(@8p)) and (iskeyword(@9p)) and (iskeyword(@10p)) and (iskeyword(@11p)) { @{keyframe} { .kd(''; @1r; @1p); } @{sp} { .kd(''; @2r; @2p); } @{sp} { .kd('l'; @3r; @3p); } }
+		.ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p) when not (iskeyword(@1p)) and not (iskeyword(@2p)) and not (iskeyword(@3p))  and not (iskeyword(@4p)) and (iskeyword(@5p)) and (iskeyword(@6p)) and (iskeyword(@7p)) and (iskeyword(@8p)) and (iskeyword(@9p)) and (iskeyword(@10p)) and (iskeyword(@11p)) { @{keyframe} { .kd(''; @1r; @1p); } @{sp} { .kd(''; @2r; @2p); } @{sp} { .kd(''; @3r; @3p); } @{sp} { .kd('l'; @4r; @4p); } }
+		.ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p) when not (iskeyword(@1p)) and not (iskeyword(@2p)) and not (iskeyword(@3p))  and not (iskeyword(@4p)) and not (iskeyword(@5p)) and (iskeyword(@6p)) and (iskeyword(@7p)) and (iskeyword(@8p)) and (iskeyword(@9p)) and (iskeyword(@10p)) and (iskeyword(@11p)) { @{keyframe} { .kd(''; @1r; @1p); } @{sp} { .kd(''; @2r; @2p); } @{sp} { .kd(''; @3r; @3p); } @{sp} { .kd(''; @4r; @4p); } @{sp} { .kd('l'; @5r; @5p); } }
+		.ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p) when not (iskeyword(@1p)) and not (iskeyword(@2p)) and not (iskeyword(@3p))  and not (iskeyword(@4p)) and not (iskeyword(@5p)) and not (iskeyword(@6p)) and (iskeyword(@7p)) and (iskeyword(@8p)) and (iskeyword(@9p)) and (iskeyword(@10p)) and (iskeyword(@11p)) { @{keyframe} { .kd(''; @1r; @1p); } @{sp} { .kd(''; @2r; @2p); } @{sp} { .kd(''; @3r; @3p); } @{sp} { .kd(''; @4r; @4p); } @{sp} { .kd(''; @5r; @5p); } @{sp} { .kd('l'; @6r; @6p); } }
+		.ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p) when not (iskeyword(@1p)) and not (iskeyword(@2p)) and not (iskeyword(@3p))  and not (iskeyword(@4p)) and not (iskeyword(@5p)) and not (iskeyword(@6p)) and not (iskeyword(@7p)) and (iskeyword(@8p)) and (iskeyword(@9p)) and (iskeyword(@10p)) and (iskeyword(@11p)) { @{keyframe} { .kd(''; @1r; @1p); } @{sp} { .kd(''; @2r; @2p); } @{sp} { .kd(''; @3r; @3p); } @{sp} { .kd(''; @4r; @4p); } @{sp} { .kd(''; @5r; @5p); } @{sp} { .kd(''; @6r; @6p); } @{sp} { .kd('l'; @7r; @7p); } }
+		.ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p) when not (iskeyword(@1p)) and not (iskeyword(@2p)) and not (iskeyword(@3p))  and not (iskeyword(@4p)) and not (iskeyword(@5p)) and not (iskeyword(@6p)) and not (iskeyword(@7p)) and not (iskeyword(@8p)) and (iskeyword(@9p)) and (iskeyword(@10p)) and (iskeyword(@11p)) { @{keyframe} { .kd(''; @1r; @1p); } @{sp} { .kd(''; @2r; @2p); } @{sp} { .kd(''; @3r; @3p); } @{sp} { .kd(''; @4r; @4p); } @{sp} { .kd(''; @5r; @5p); } @{sp} { .kd(''; @6r; @6p); } @{sp} { .kd(''; @7r; @7p); } @{sp} { .kd('l'; @8r; @8p); } }
+		.ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p) when not (iskeyword(@1p)) and not (iskeyword(@2p)) and not (iskeyword(@3p))  and not (iskeyword(@4p)) and not (iskeyword(@5p)) and not (iskeyword(@6p)) and not (iskeyword(@7p)) and not (iskeyword(@8p)) and not (iskeyword(@9p)) and (iskeyword(@10p)) and (iskeyword(@11p)) { @{keyframe} { .kd(''; @1r; @1p); } @{sp} { .kd(''; @2r; @2p); } @{sp} { .kd(''; @3r; @3p); } @{sp} { .kd(''; @4r; @4p); } @{sp} { .kd(''; @5r; @5p); } @{sp} { .kd(''; @6r; @6p); } @{sp} { .kd(''; @7r; @7p); } @{sp} { .kd(''; @8r; @8p); } @{sp} { .kd('l'; @9r; @9p); } }
+		.ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p) when not (iskeyword(@1p)) and not (iskeyword(@2p)) and not (iskeyword(@3p))  and not (iskeyword(@4p)) and not (iskeyword(@5p)) and not (iskeyword(@6p)) and not (iskeyword(@7p)) and not (iskeyword(@8p)) and not (iskeyword(@9p)) and not (iskeyword(@10p)) and (iskeyword(@11p)) { @{keyframe} { .kd(''; @1r; @1p); } @{sp} { .kd(''; @2r; @2p); } @{sp} { .kd(''; @3r; @3p); } @{sp} { .kd(''; @4r; @4p); } @{sp} { .kd(''; @5r; @5p); } @{sp} { .kd(''; @6r; @6p); } @{sp} { .kd(''; @7r; @7p); } @{sp} { .kd(''; @8r; @8p); } @{sp} { .kd(''; @9r; @9p); } @{sp} { .kd('l'; @10r; @10p); } }
+		.ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p) when not (iskeyword(@1p)) and not (iskeyword(@2p)) and not (iskeyword(@3p))  and not (iskeyword(@4p)) and not (iskeyword(@5p)) and not (iskeyword(@6p)) and not (iskeyword(@7p)) and not (iskeyword(@8p)) and not (iskeyword(@9p)) and not (iskeyword(@10p)) and not (iskeyword(@11p)) { @{keyframe} { .kd(''; @1r; @1p); } @{sp} { .kd(''; @2r; @2p); } @{sp} { .kd(''; @3r; @3p); } @{sp} { .kd(''; @4r; @4p); } @{sp} { .kd(''; @5r; @5p); } @{sp} { .kd(''; @6r; @6p); } @{sp} { .kd(''; @7r; @7p); } @{sp} { .kd(''; @8r; @8p); } @{sp} { .kd(''; @9r; @9p); } @{sp} { .kd(''; @10r; @10p); } @{sp} { .kd('l'; @11r; @11p); } }
+
+    .kd(@1id; @ru; @pcn) when not (iskeyword(@s)) {@pr: %(@ru, @v); @rij: ~"@{pr};"; @ij: ~"@{pcn} {@{z}    @{rij} /*"; @{ij} { /**/ } }
+    .kd(@1id; @ru; @pcn) when not (@1i='l') and not (@1id='l') and (iskeyword(@s)) {@pr: %(@ru, @v); @rij: ~"@{pr};"; @ij: ~"@{pcn} {@{z}    @{rij} /*"; @{ij} { /**/ } }
+    .kd(@1id; @ru; @pcn) when not (@1i='l') and (@1id='l') and (iskeyword(@s)) {@pr: %(@ru, @v); @rij: ~"@{pr};"; @ij: ~"@{pcn} {@{z}    @{rij} /*"; @{ij} { /**/ } }
+    .kd(@1id; @ru; @pcn) when (@1i='l') and not (@1id='l') and (iskeyword(@s)) {@pr: %(@ru, @v); @rij: ~"@{pr};"; @ij: ~"@{pcn} {@{z}    @{rij} /*"; @{ij} { /**/ } }
+    .kd(@1id; @ru; @pcn) when (@1i='l') and (@1id='l') and (iskeyword(@s)) {@pr: %(@ru, @v); @rij: ~"@{pr};"; @ij: ~"@{pcn} {@{z}    @{rij}@{z} } /*"; @{ij} { /**/ } }
+
+    .ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p);
+
+    .as() {}
+    .as() when (@1i='l') and not (iskeyword(@s)) and (iskeyword(@p)) {
+      @{as} {
+        -moz-animation: @n;
+        -webkit-animation: @n;
+        -o-animation: @n;
+        animation: @n;
+      }
+    }
+    .as() when (@1i='l') and not (iskeyword(@s)) and not (iskeyword(@p)) {
+      @{as} {
+        -moz-animation: @n @p;
+        -webkit-animation: @n @p;
+        -o-animation: @n @p;
+        animation: @n @p;
+      }
+    }
+    .as;
+  }
+
+  .keyframe(''   , 'f',  '-moz-');
+  .keyframe(~'} ', 0, '-webkit-');
+  .keyframe(~'} ', 0,      '-o-');
+  .keyframe(~'} ', 'l',       '');
+}
+
+
+// LESS PHP VERSION
+// --------------------------------------------------
+.animate-me(@n; @p: false; @s: false; @1p: false; @1r: 'x'; @2p: false; @2r: 'x'; @3p: false; @3r: 'x'; @4p: false; @4r: 'x'; @5p: false; @5r: 'x'; @6p: false; @6r: 'x'; @7p: false; @7r: 'x'; @8p: false; @8r: 'x'; @9p: false; @9r: 'x'; @10p: false; @10r: 'x'; @11p: false; @11r: 'x' )
+	when (@lesscompiler='php') {
+  .keyframe(@x; @1i; @v) {
+		@sp: ~" ";
+		@co: ~"/*";
+		@cc: ~"*/";
+		@as: ~"*/} } @{s}";
+		@hc: ~"*/ } } .hack";
+    @keyframe: ~"@{x}@@{v}keyframes @{n} { ";
+
+		.ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p) when not (iskeyword(@1p)) and (iskeyword(@2p)) and (iskeyword(@3p)) and (iskeyword(@4p)) and (iskeyword(@5p)) and (iskeyword(@6p)) and (iskeyword(@7p)) and (iskeyword(@8p)) and (iskeyword(@9p)) and (iskeyword(@10p)) and (iskeyword(@11p)) { @{keyframe} { .kd('f'; @1r; @1p); } }
+		.ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p) when not (iskeyword(@1p)) and not (iskeyword(@2p)) and (iskeyword(@3p)) and (iskeyword(@4p)) and (iskeyword(@5p)) and (iskeyword(@6p)) and (iskeyword(@7p)) and (iskeyword(@8p)) and (iskeyword(@9p)) and (iskeyword(@10p)) and (iskeyword(@11p)) { @{keyframe} { .kd('f'; @1r; @1p); } @{sp} { .kd('l'; @2r; @2p); } }
+		.ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p) when not (iskeyword(@1p)) and not (iskeyword(@2p)) and not (iskeyword(@3p)) and (iskeyword(@4p)) and (iskeyword(@5p)) and (iskeyword(@6p)) and (iskeyword(@7p)) and (iskeyword(@8p)) and (iskeyword(@9p)) and (iskeyword(@10p)) and (iskeyword(@11p)) { @{keyframe} { .kd('f'; @1r; @1p); } @{sp} { .kd(''; @2r; @2p); } @{sp} { .kd('l'; @3r; @3p); } }
+		.ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p) when not (iskeyword(@1p)) and not (iskeyword(@2p)) and not (iskeyword(@3p))  and not (iskeyword(@4p)) and (iskeyword(@5p)) and (iskeyword(@6p)) and (iskeyword(@7p)) and (iskeyword(@8p)) and (iskeyword(@9p)) and (iskeyword(@10p)) and (iskeyword(@11p)) { @{keyframe} { .kd('f'; @1r; @1p); } @{sp} { .kd(''; @2r; @2p); } @{sp} { .kd(''; @3r; @3p); } @{sp} { .kd('l'; @4r; @4p); } }
+		.ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p) when not (iskeyword(@1p)) and not (iskeyword(@2p)) and not (iskeyword(@3p))  and not (iskeyword(@4p)) and not (iskeyword(@5p)) and (iskeyword(@6p)) and (iskeyword(@7p)) and (iskeyword(@8p)) and (iskeyword(@9p)) and (iskeyword(@10p)) and (iskeyword(@11p)) { @{keyframe} { .kd('f'; @1r; @1p); } @{sp} { .kd(''; @2r; @2p); } @{sp} { .kd(''; @3r; @3p); } @{sp} { .kd(''; @4r; @4p); } @{sp} { .kd('l'; @5r; @5p); } }
+		.ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p) when not (iskeyword(@1p)) and not (iskeyword(@2p)) and not (iskeyword(@3p))  and not (iskeyword(@4p)) and not (iskeyword(@5p)) and not (iskeyword(@6p)) and (iskeyword(@7p)) and (iskeyword(@8p)) and (iskeyword(@9p)) and (iskeyword(@10p)) and (iskeyword(@11p)) { @{keyframe} { .kd('f'; @1r; @1p); } @{sp} { .kd(''; @2r; @2p); } @{sp} { .kd(''; @3r; @3p); } @{sp} { .kd(''; @4r; @4p); } @{sp} { .kd(''; @5r; @5p); } @{sp} { .kd('l'; @6r; @6p); } }
+		.ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p) when not (iskeyword(@1p)) and not (iskeyword(@2p)) and not (iskeyword(@3p))  and not (iskeyword(@4p)) and not (iskeyword(@5p)) and not (iskeyword(@6p)) and not (iskeyword(@7p)) and (iskeyword(@8p)) and (iskeyword(@9p)) and (iskeyword(@10p)) and (iskeyword(@11p)) { @{keyframe} { .kd('f'; @1r; @1p); } @{sp} { .kd(''; @2r; @2p); } @{sp} { .kd(''; @3r; @3p); } @{sp} { .kd(''; @4r; @4p); } @{sp} { .kd(''; @5r; @5p); } @{sp} { .kd(''; @6r; @6p); } @{sp} { .kd('l'; @7r; @7p); } }
+		.ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p) when not (iskeyword(@1p)) and not (iskeyword(@2p)) and not (iskeyword(@3p))  and not (iskeyword(@4p)) and not (iskeyword(@5p)) and not (iskeyword(@6p)) and not (iskeyword(@7p)) and not (iskeyword(@8p)) and (iskeyword(@9p)) and (iskeyword(@10p)) and (iskeyword(@11p)) { @{keyframe} { .kd('f'; @1r; @1p); } @{sp} { .kd(''; @2r; @2p); } @{sp} { .kd(''; @3r; @3p); } @{sp} { .kd(''; @4r; @4p); } @{sp} { .kd(''; @5r; @5p); } @{sp} { .kd(''; @6r; @6p); } @{sp} { .kd(''; @7r; @7p); } @{sp} { .kd('l'; @8r; @8p); } }
+		.ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p) when not (iskeyword(@1p)) and not (iskeyword(@2p)) and not (iskeyword(@3p))  and not (iskeyword(@4p)) and not (iskeyword(@5p)) and not (iskeyword(@6p)) and not (iskeyword(@7p)) and not (iskeyword(@8p)) and not (iskeyword(@9p)) and (iskeyword(@10p)) and (iskeyword(@11p)) { @{keyframe} { .kd('f'; @1r; @1p); } @{sp} { .kd(''; @2r; @2p); } @{sp} { .kd(''; @3r; @3p); } @{sp} { .kd(''; @4r; @4p); } @{sp} { .kd(''; @5r; @5p); } @{sp} { .kd(''; @6r; @6p); } @{sp} { .kd(''; @7r; @7p); } @{sp} { .kd(''; @8r; @8p); } @{sp} { .kd('l'; @9r; @9p); } }
+		.ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p) when not (iskeyword(@1p)) and not (iskeyword(@2p)) and not (iskeyword(@3p))  and not (iskeyword(@4p)) and not (iskeyword(@5p)) and not (iskeyword(@6p)) and not (iskeyword(@7p)) and not (iskeyword(@8p)) and not (iskeyword(@9p)) and not (iskeyword(@10p)) and (iskeyword(@11p)) { @{keyframe} { .kd('f'; @1r; @1p); } @{sp} { .kd(''; @2r; @2p); } @{sp} { .kd(''; @3r; @3p); } @{sp} { .kd(''; @4r; @4p); } @{sp} { .kd(''; @5r; @5p); } @{sp} { .kd(''; @6r; @6p); } @{sp} { .kd(''; @7r; @7p); } @{sp} { .kd(''; @8r; @8p); } @{sp} { .kd(''; @9r; @9p); } @{sp} { .kd('l'; @10r; @10p); } }
+		.ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p) when not (iskeyword(@1p)) and not (iskeyword(@2p)) and not (iskeyword(@3p))  and not (iskeyword(@4p)) and not (iskeyword(@5p)) and not (iskeyword(@6p)) and not (iskeyword(@7p)) and not (iskeyword(@8p)) and not (iskeyword(@9p)) and not (iskeyword(@10p)) and not (iskeyword(@11p)) { @{keyframe} { .kd('f'; @1r; @1p); } @{sp} { .kd(''; @2r; @2p); } @{sp} { .kd(''; @3r; @3p); } @{sp} { .kd(''; @4r; @4p); } @{sp} { .kd(''; @5r; @5p); } @{sp} { .kd(''; @6r; @6p); } @{sp} { .kd(''; @7r; @7p); } @{sp} { .kd(''; @8r; @8p); } @{sp} { .kd(''; @9r; @9p); } @{sp} { .kd(''; @10r; @10p); } @{sp} { .kd('l'; @11r; @11p); } }
+
+    .kd(@1id; @ru; @pcn) when (@1id='f') and not (iskeyword(@s)) { @pr: %(@ru, @v); @rij: ~"@{pr};"; @ij: ~"@{pcn} { @{rij} @{co}"; @{ij} { commented: 0; } }
+    .kd(@1id; @ru; @pcn) when not (@1id='f') and not (iskeyword(@s)) { @pr: %(@ru, @v); @rij: ~"@{pr};"; @ij: ~"@{cc} } @{pcn} { @{rij} @{co}"; @{ij} { commented: 0; } }
+    .kd(@1id; @ru; @pcn) when (@1id='f') and (iskeyword(@s)) { @pr: %(@ru, @v); @rij: ~"@{pr};"; @ij: ~"@{pcn} { @{rij} @{co}"; @{ij} { commented: 0; } }
+    .kd(@1id; @ru; @pcn) when not (@1id='f') and (iskeyword(@s)) { @pr: %(@ru, @v); @rij: ~"@{pr};"; @ij: ~"@{cc} } @{pcn} { @{rij} @{co}"; @{ij} { commented: 0; } }
+    .ks(@1p; @2p; @3p; @4p; @5p; @6p; @7p; @8p; @9p; @10p; @11p);
+
+    .as() {}
+    .as() when (@1i='l') and not (iskeyword(@s)) and (iskeyword(@p)) {
+      @{as} {
+        -moz-animation: @n;
+        -webkit-animation: @n;
+        -o-animation: @n;
+        animation: @n;
+      }
+    }
+    .as() when (@1i='l') and not (iskeyword(@s)) and not (iskeyword(@p)) {
+      @{as} {
+        -moz-animation: @n @p;
+        -webkit-animation: @n @p;
+        -o-animation: @n @p;
+        animation: @n @p;
+      }
+    }
+    .as() when (@1i='l') and (iskeyword(@s)) {
+      @{hc} { visibility: visible }
+    }
+    .as;
+  }
+  .keyframe(""      , 'f',  "-moz-");
+  .keyframe(~"*/} }", 0, "-webkit-");
+  .keyframe(~"*/} }", 0,      "-o-");
+  .keyframe(~"*/} }", 'l',       "");
+}
